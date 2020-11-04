@@ -1,7 +1,5 @@
-import data  # projects definitions are placed in different file
-
 # https://flask.palletsprojects.com/en/1.1.x/api/
-from flask import Flask, render_template
+
 
 def valdata():
     greeting = "Hey, Hey, Hey!"
@@ -20,6 +18,7 @@ def aidandata2():
     info = {"greeting": greeting, "name": name, "age": age, "grade": grade}
     return info
 
+
 def michaeldata3():
     greeting = "Hey, Hey, Hey!"
     name = "Michael Iribarren"
@@ -27,6 +26,7 @@ def michaeldata3():
     grade = "Junior"
     info = {"greeting": greeting, "name": name, "age": age, "grade": grade}
     return info
+
 
 def risadata4():
     greeting = "Hey, Hey, Hey!"
@@ -40,66 +40,77 @@ def risadata4():
 def alldata():
     return [valdata(), aidandata2(), michaeldata3(), risadata4()]
 
-#Data "setup" for Projects
-#next step would be to extract project data from a database
+
+# Data "setup" for Projects
+# next step would be to extract project data from a database
 def setup():
-    #Source Data
+    # Source Data
     name = "Bang2.0"
     github = "https://github.com/valeriemiliteeva"
     twitter = "https://twitter.com/NighthawkCoding"
     source = {"name": name, "github": github, "twitter": twitter}
-    #Project Data
-    project1 =  "Hello Series"
+    # Project Data
+    project1 = "Hello Series"
     projlinks1 = [
         Link("Project Plan", "http://nighthawkcoders.cf/courses/python/"),
         Link("Repl", "https://repl.it/@jmort1021/Python-Hello-Series#README.md"),
         Link("Resources", "https://padlet.com/jmortensen7/csp2021")
     ]
-    project2 =  "Flask Project"
+    project2 = "Flask Project"
     projlinks2 = [
         Link("Project Plan", "http://nighthawkcoders.cf/courses/python/"),
-        Link("Repl", "https://repl.it/@jmort1021/Python-Web-Portfolio-Series?__cf_chl_jschl_tk__=cff72504752e89d50dea999ce10f859a17ecc294-1603026111-0-AdBP5FO-3nyUc_KVdPlNwvXM4MwUXy1HXHmbiJui1YBnUTPJZ8X4UBZVeYUXrnwRBJVvku9NftGYDWtp8lp4KovKX55R8S4twedzHpa2snwLwoAWaxuc4rgAa2l9J_rWqnNvUNcjJ8-p1V1RuTWV3lIy149lptozqAQdJnGj7PlcJxnu3YH22EXK-jl7bmdQmW9r_9fE1xp8J7sOFS3I1PMgmtoExcDIQSBBTnx1zQsyQGNS6wnuX72MAPnS_x3ZL1ETNRgFbVKpLsFJiR9ED1ErU54wyZYrUxEbZ_txHd7qY1T_s_lE6Ll8jYWHx-GulQ#main.py"),
+        Link("Repl",
+             "https://repl.it/@jmort1021/Python-Web-Portfolio-Series?__cf_chl_jschl_tk__=cff72504752e89d50dea999ce10f859a17ecc294-1603026111-0-AdBP5FO-3nyUc_KVdPlNwvXM4MwUXy1HXHmbiJui1YBnUTPJZ8X4UBZVeYUXrnwRBJVvku9NftGYDWtp8lp4KovKX55R8S4twedzHpa2snwLwoAWaxuc4rgAa2l9J_rWqnNvUNcjJ8-p1V1RuTWV3lIy149lptozqAQdJnGj7PlcJxnu3YH22EXK-jl7bmdQmW9r_9fE1xp8J7sOFS3I1PMgmtoExcDIQSBBTnx1zQsyQGNS6wnuX72MAPnS_x3ZL1ETNRgFbVKpLsFJiR9ED1ErU54wyZYrUxEbZ_txHd7qY1T_s_lE6Ll8jYWHx-GulQ#main.py"),
         Link("Resources", "https://padlet.com/jmortensen7/csptime1_2")
     ]
 
-    #Project Objects
+    # Project Objects
     proj1 = Project(project1, projlinks1)
     proj2 = Project(project2, projlinks2)
-    #HTML Data
+    # HTML Data
     projects = Projects(source, [proj1, proj2])
     return projects
 
-#Link class contains button (label) and hypertext reference (href)
+
+# Link class contains button (label) and hypertext reference (href)
 class Link():
-    #link data with button and href (url)
+    # link data with button and href (url)
     def __init__(self, btn, href):
         self.btn = btn
         self.href = href
+
     def get_btn(self):
         return self.btn
+
     def get_href(self):
         return self.href
 
-#Project data class contain project name and links (Link class objects)
+
+# Project data class contain project name and links (Link class objects)
 class Project():
-    #project data with name and links
+    # project data with name and links
     def __init__(self, name, links):
         self.name = name
         self.links = links
+
     def get_name(self):
         return self.name
+
     def get_links(self):
         return self.links
 
-#Projects class contains person (owner) and multiple projects (Project class objects)
+
+# Projects class contains person (owner) and multiple projects (Project class objects)
 class Projects():
-    #HTML data with source and projects
+    # HTML data with source and projects
     def __init__(self, source, projects):
         self.source = source
         self.projects = projects
-    #source data getter
+
+    # source data getter
     def get_source(self):
         return self.source
-    #project data getter
+
+    # project data getter
     def get_projects(self):
         return self.projects
