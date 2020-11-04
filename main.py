@@ -26,12 +26,17 @@ def hello_route():
 def flask_route():
     return render_template("flask.html", projects=data.setup())
 
+@app.route('/period2/')
+def period2_route():
+    return render_template("period2.html", projects=data.setup())
 
-# connects /repo path of server to render repo.html
-@app.route('/repo/')
-def repo_route():
-    return render_template("repo.html", projects=data.setup())
+@app.route('/period4/')
+def period4_route():
+    return render_template("period4.html", projects=data.setup())
 
+@app.route('/period5/')
+def period5_route():
+    return render_template("period5.html", projects=data.setup())
 
 if __name__ == "__main__":
     # runs the application on the repl development server
