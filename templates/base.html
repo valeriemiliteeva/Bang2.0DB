@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {% block head %}
-    <title></title>
     {% endblock %}
 </head>
 
@@ -32,11 +31,10 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="/hello/">Period 2</a>
-            <a class="nav-link" href="/flask/">Period 3</a>
-            <a class="nav-link" href="/flask/">Period 4</a>
-            <a class="nav-link" href="/flask/">Period 5</a>
-            <a class="nav-link" href="/flask/">All</a>
+            <a class="nav-link" href="/period2/">Period 2</a>
+            <a class="nav-link" href="/period4/">Period 4</a>
+            <a class="nav-link" href="/period5/">Period 5</a>
+            <a class="nav-link" href="/base/">All</a>
         </div>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -59,7 +57,7 @@
     </div>
 
     <div class="product" style="margin-top: 2%;">
-        <div class="row" style="padding-top: 10%; padding-bottom: 5%;">
+        <div class="row" style="padding-top: 2%; padding-bottom: 5%;">
 
             <div class="col-8" >
                 {% block title %}
@@ -84,6 +82,25 @@
                 {% endblock %}
             </div>
 
+        </div>
+
+    </div>
+
+    <div class="row-2" style="padding-left: 10%; padding-top: 15%; padding-bottom: 30%;">
+
+        <div class="col-4">
+            {% block link4 %}
+            {% endblock %}
+        </div>
+
+        <div class="col-4">
+            {% block link5 %}
+            {% endblock %}
+        </div>
+
+        <div class="col-4">
+            {% block link6 %}
+            {% endblock %}
         </div>
 
     </div>
