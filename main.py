@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_route():
-    return render_template("base.html", projects=data.setup())
+    return render_template("base1.html", projects=data.setup())
 
 
 @app.route('/period2/')
@@ -32,4 +32,4 @@ def period5_route():
 
 if __name__ == "__main__":
     # runs the application on the repl development server
-    app.run(debug=True)
+    app.run(debug=True, host='127.0.0.1', port='5001')
