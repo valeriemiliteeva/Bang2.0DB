@@ -1,32 +1,117 @@
-{% extends "base1.html" %}
-
-{% block head %}
-<title>{{name}} | Period 2</title>
-{% endblock %}
-
-<!-- Period 2 Project links -->
-{% block title %}
-<h1>Period 2 Projects</h1>
-{% endblock %}
+{% extends "navbar.html" %}
 
 {% block link1 %}
-<a href="https://repl.it/@AndrewZhang4/MadLib#README.md" class="btn">Madlib Game<h4>Anime</h4><h6>Andrew, Bradley, Shreya, Diane, Nicholas</h6></a>
+
+<div class="images" style="display: flex; flex-direction: row">
+    <div>
+        <div class="img-container">
+            <img src="/static/img/cat1.jpg">
+            <div class="overlay navy">
+                <div class="text">Team Name: Member 1, Member 2, Member 3, Member 4</div>
+            </div>
+        </div>
+        <a href="http://google.com"><h2>Project 1</h2></a>
+        <p>
+            Description of project - This is the project. This is what it does. This is how you use it. Blah
+
+        </p>
+    </div>
+    <div>
+        <div class="img-container">
+            <img src="/static/img/cat2.png">
+            <div class="overlay green">
+                <div class="text">Team Name: Member 1, Member 2, Member 3, Member 4</div>
+            </div>
+        </div>
+        <a href="http://facebook.com"><h2>Project 2</h2></a>
+        <p>
+            Description of project - This is the project. This is what it does. This is how you use it. Blah
+
+        </p>
+    </div>
+    <div>
+        <div class="img-container">
+            <img src="/static/img/cat3.jpg">
+            <div class="overlay navy">
+                <div class="text">Team Name: Member 1, Member 2, Member 3, Member 4</div>
+            </div>
+        </div>
+        <a href="http://apple.com"><h2>Project 3</h2></a>
+        <p>
+            Description of project - This is the project. This is what it does. This is how you use it. Blah
+
+        </p>
+    </div>
+</div>
+
+
+<style>
+    .images img {
+      width: 500px;
+    }
+
+    .images>div {
+      padding: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      color: black;
+      font-size: 40px;
+      font-family: times new roman;
+    }
+
+    .img-container {
+        position: relative;
+    }
+
+    .img-container:hover .overlay {
+        opacity: 1;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .navy.overlay {
+        background-color: #04274c;
+    }
+
+    .green.overlay {
+      background-color: #12472d;
+    }
+
+    .cat-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+
+</style>
+
+
+
 {% endblock %}
-{% block link2 %}
-<a href="https://repl.it/@dkrenz/period-2-group#READMEFIRST.md" class="btn">Newbie Shop<h4>Newbiecoders</h4><h6>Andrea, Wesley, Diego, Ethan, Naweid</h6></a>
-{% endblock %}
-{% block link3 %}
-<a href="https://repl.it/@AZPragTeam/ThisIsItBois#README.md" class="btn">ASCII Database<h4>Einsteins</h4><h6>Pragadeesh, Ayman, Ali, Brandon, Navodit</h6></a>
-{% endblock %}
-{% block link4 %}
-<a href="https://repl.it/@ryazhisai/Rap-Name-Generator#README.md" class="btn">Rap Name Generator<h4>Group 5</h4><h6>Sophie, Carter, Aditi, Isai, Mustafa</h6></a>
-{% endblock %}
-{% block link5 %}
-<a href="https://repl.it/@DaneVestal/Project-1#README.md" class="btn">Trivia Game<h6>Crystal, Ida, Eva, Dane, Nivu</h6></a>
-{% endblock %}
-{% block link6 %}
-<a href="https://repl.it/@TMarwah/Team3-SSH-Login#README.md" class="btn">PacMan Corps Information™ SSH Shell<h6>Tanmay, Andrew, Ahmad, Luca, Mileta, Cody</h6></a>
-{% endblock %}
-{% block link7 %}
-<a href="https://repl.it/@1846292/CipherCrypto#main.py" class="btn">Cipher Crypto<h4>Cypher Crypto</h4><h6>Tyler, Dylan, Nihar, Anthony, Cherry</h6></a>
-{% endblock %}
+
+

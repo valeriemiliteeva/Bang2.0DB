@@ -8,7 +8,6 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-# connects default URL of server to render home.html
 
 @app.route('/')
 def home_route():
